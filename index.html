@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Access</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0a0f1c, #0d1b2a);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(145deg, #2c2f36, #1b1e24);
+  padding: 25px;
+  border-radius: 18px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Price */
+.price {
+  font-size: 28px;
+  color: #2ecc71;
+  margin: 10px 0;
+}
+
+/* Features */
+.features {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.features li {
+  margin-bottom: 8px;
+}
+
+/* Button */
+.btn {
+  background: #2ecc71;
+  color: #000;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* UPI */
+.upi {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+.upi span {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  padding: 15px;
+}
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <b>PREMIUM</b>
+  <span>Secure</span>
+</div>
+
+<div class="container">
+  <div class="card">
+
+    <h2>Premium Access</h2>
+    <div class="price">₹29 Only</div>
+
+    <ul class="features">
+      <li>✔ Instant access after confirmation</li>
+      <li>✔ Private premium content</li>
+      <li>✔ High quality</li>
+      <li>✔ Secure payment</li>
+    </ul>
+
+    <!-- Pay Button -->
+    <button class="btn" onclick="payNow()">Pay ₹29</button>
+
+    <!-- Manual UPI -->
+    <div class="upi">
+      Or pay manually:
+      <span onclick="copyUPI()">tkhamsa985-1@okaxis</span>
+    </div>
+
+    <div class="upi">🔒 Secure Payment</div>
+
+    <p style="font-size:12px;color:#aaa;margin-top:10px;">
+      Digital product. Access will be provided after payment verification.
+    </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  Contact: support@email.com <br><br>
+  <a href="#">Privacy</a> |
+  <a href="#">Terms</a> |
+  <a href="#">About</a>
+</div>
+
+<script>
+function payNow() {
+  window.location.href =
+  "upi://pay?pa=tkhamsa985-1@okaxis&pn=Sooraj%20Krishna&am=29&cu=INR";
+}
+
+function copyUPI() {
+  navigator.clipboard.writeText("tkhamsa985-1@okaxis");
+  alert("UPI ID copied");
+}
+</script>
+
+</body>
+  </html>
